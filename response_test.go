@@ -1,8 +1,8 @@
 package req
 
 import (
-	"github.com/imroc/req/v3/internal/header"
-	"github.com/imroc/req/v3/internal/tests"
+	"github.com/secr3t/req/internal/header"
+	"github.com/secr3t/req/internal/tests"
 	"net/http"
 	"testing"
 )

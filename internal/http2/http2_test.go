@@ -7,7 +7,7 @@ package http2
 import (
 	"flag"
 	"fmt"
-	"github.com/imroc/req/v3/internal/tests"
+	"github.com/secr3t/req/internal/tests"
 	"net/http"
 	"testing"
 	"time"

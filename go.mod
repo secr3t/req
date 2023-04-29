@@ -1,4 +1,4 @@
-module github.com/imroc/req/v3
+module github.com/secr3t/req
 
 go 1.19
 

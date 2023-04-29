@@ -7,7 +7,7 @@ package http2
 import (
 	"bytes"
 	"fmt"
-	"github.com/imroc/req/v3/internal/tests"
+	"github.com/secr3t/req/internal/tests"
 	"io"
 	"reflect"
 	"strings"

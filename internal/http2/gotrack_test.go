@@ -6,7 +6,7 @@ package http2
 
 import (
 	"fmt"
-	"github.com/imroc/req/v3/internal/tests"
+	"github.com/secr3t/req/internal/tests"
 	"strings"
 	"testing"
 )

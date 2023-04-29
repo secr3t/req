@@ -1,8 +1,9 @@
 package req
 
 import (
-	"github.com/imroc/req/v3/internal/header"
-	"github.com/imroc/req/v3/internal/util"
+	"compress/gzip"
+	"github.com/secr3t/req/internal/header"
+	"github.com/secr3t/req/internal/util"
 	"io"
 	"net/http"
 	"strings"
@@ -237,7 +238,17 @@ func (r *Response) ToBytes() (body []byte, err error) {
 		}
 		r.body = body
 	}()
-	body, err = io.ReadAll(r.Body)
+
+	var reader io.ReadCloser
+	switch r.GetHeader("Content-Encoding") {
+	case "gzip":
+		reader, _ = gzip.NewReader(r.Body)
+		defer reader.Close()
+	default:
+		reader = r.Body
+	}
+
+	body, err = io.ReadAll(reader)
 	r.setReceivedAt()
 	if err == nil && r.Request.client.responseBodyTransformer != nil {
 		body, err = r.Request.client.responseBodyTransformer(body, r.Request, r)

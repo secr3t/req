@@ -8,7 +8,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
-	"github.com/imroc/req/v3/internal/ascii"
+	"github.com/secr3t/req/internal/ascii"
 	"io"
 	"log"
 	"math"
