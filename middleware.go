@@ -2,8 +2,8 @@ package req
 
 import (
 	"bytes"
-	"github.com/secr3t/req/internal/header"
-	"github.com/secr3t/req/internal/util"
+	"github.com/secr3t/req/v3/internal/header"
+	"github.com/secr3t/req/v3/internal/util"
 	"io"
 	"mime/multipart"
 	"net/http"

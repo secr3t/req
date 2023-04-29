@@ -2,7 +2,7 @@ package req
 
 import (
 	"errors"
-	"github.com/secr3t/req/internal/ascii"
+	"github.com/secr3t/req/v3/internal/ascii"
 	"golang.org/x/net/http/httpguts"
 	"net/http"
 	"strings"

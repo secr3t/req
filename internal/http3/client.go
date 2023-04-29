@@ -15,9 +15,9 @@ import (
 
 	"github.com/quic-go/qpack"
 	"github.com/quic-go/quic-go"
-	"github.com/secr3t/req/internal/dump"
-	"github.com/secr3t/req/internal/quic-go/quicvarint"
-	"github.com/secr3t/req/internal/transport"
+	"github.com/secr3t/req/v3/internal/dump"
+	"github.com/secr3t/req/v3/internal/quic-go/quicvarint"
+	"github.com/secr3t/req/v3/internal/transport"
 )
 
 // MethodGet0RTT allows a GET request to be sent using 0-RTT.

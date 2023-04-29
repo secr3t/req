@@ -1,4 +1,4 @@
-module github.com/secr3t/req
+module github.com/secr3t/req/v3
 
 go 1.19
 

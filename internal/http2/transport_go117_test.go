@@ -11,7 +11,7 @@ import (
 	"context"
 	"crypto/tls"
 	"errors"
-	"github.com/secr3t/req/internal/transport"
+	"github.com/secr3t/req/v3/internal/transport"
 	"net/http"
 	"net/http/httptest"
 

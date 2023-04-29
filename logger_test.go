@@ -2,7 +2,7 @@ package req
 
 import (
 	"bytes"
-	"github.com/secr3t/req/internal/tests"
+	"github.com/secr3t/req/v3/internal/tests"
 	"log"
 	"testing"
 )

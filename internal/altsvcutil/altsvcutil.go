@@ -3,8 +3,8 @@ package altsvcutil
 import (
 	"bytes"
 	"fmt"
-	"github.com/secr3t/req/internal/netutil"
-	"github.com/secr3t/req/pkg/altsvc"
+	"github.com/secr3t/req/v3/internal/netutil"
+	"github.com/secr3t/req/v3/pkg/altsvc"
 	"io"
 	"net"
 	"net/url"

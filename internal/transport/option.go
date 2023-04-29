@@ -3,7 +3,7 @@ package transport
 import (
 	"context"
 	"crypto/tls"
-	"github.com/secr3t/req/internal/dump"
+	"github.com/secr3t/req/v3/internal/dump"
 	"net"
 	"net/http"
 	"net/url"

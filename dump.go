@@ -1,7 +1,7 @@
 package req
 
 import (
-	"github.com/secr3t/req/internal/dump"
+	"github.com/secr3t/req/v3/internal/dump"
 	"io"
 	"os"
 )

@@ -11,8 +11,8 @@ import (
 	"sync"
 
 	"github.com/quic-go/qpack"
-	"github.com/secr3t/req/internal/dump"
-	"github.com/secr3t/req/internal/header"
+	"github.com/secr3t/req/v3/internal/dump"
+	"github.com/secr3t/req/v3/internal/header"
 
 	"github.com/quic-go/quic-go"
 	"golang.org/x/net/http/httpguts"

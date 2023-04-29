@@ -15,9 +15,9 @@ import (
 	"time"
 
 	"github.com/hashicorp/go-multierror"
-	"github.com/secr3t/req/internal/dump"
-	"github.com/secr3t/req/internal/header"
-	"github.com/secr3t/req/internal/util"
+	"github.com/secr3t/req/v3/internal/dump"
+	"github.com/secr3t/req/v3/internal/header"
+	"github.com/secr3t/req/v3/internal/util"
 )
 
 // Request struct is used to compose and fire individual request from

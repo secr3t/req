@@ -5,7 +5,7 @@
 package http2
 
 import (
-	"github.com/secr3t/req/internal/ascii"
+	"github.com/secr3t/req/v3/internal/ascii"
 	"net/http"
 	"sync"
 )

@@ -13,7 +13,7 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/secr3t/req/internal/util"
+	"github.com/secr3t/req/v3/internal/util"
 	"io"
 )
 

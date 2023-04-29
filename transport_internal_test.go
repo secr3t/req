@@ -9,8 +9,8 @@ package req
 import (
 	"context"
 	"errors"
-	"github.com/secr3t/req/internal/http2"
-	"github.com/secr3t/req/internal/tests"
+	"github.com/secr3t/req/v3/internal/http2"
+	"github.com/secr3t/req/v3/internal/tests"
 	"net"
 	"net/http"
 	"strings"
