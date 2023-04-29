@@ -5,6 +5,7 @@ import (
 	"github.com/secr3t/req/internal/header"
 	"github.com/secr3t/req/internal/util"
 	"io"
+	"log"
 	"net/http"
 	"strings"
 	"time"
@@ -238,6 +239,10 @@ func (r *Response) ToBytes() (body []byte, err error) {
 		}
 		r.body = body
 	}()
+
+	if r.Request.isLogResponseBodySize {
+		log.Println("body size = ", util.ByteCountIEC(int64(len(r.body))))
+	}
 
 	var reader io.ReadCloser
 	switch r.GetHeader("Content-Encoding") {

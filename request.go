@@ -47,6 +47,7 @@ type Request struct {
 	forceChunkedEncoding     bool
 	isSaveResponse           bool
 	close                    bool
+	isLogResponseBodySize    bool
 	error                    error
 	client                   *Client
 	uploadCallback           UploadCallback
@@ -929,6 +930,12 @@ func (r *Request) SetDumpOptions(opt *DumpOptions) *Request {
 	} else {
 		r.dumpOptions = opt
 	}
+	return r
+}
+
+// EnableLogResponseBodySize enables log body size. If compressed, it would log before decompress
+func (r *Request) EnableLogResponseBodySize() *Request {
+	r.isLogResponseBodySize = true
 	return r
 }
 
