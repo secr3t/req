@@ -1704,8 +1704,15 @@ func (c *Client) roundTrip(r *Request) (resp *Response, err error) {
 		GetBody:       r.GetBody,
 		Close:         r.close,
 	}
-	for _, cookie := range r.Cookies {
-		req.AddCookie(cookie)
+
+	if c.httpClient != nil && c.httpClient.Jar != nil {
+		for _, cookie := range c.httpClient.Jar.Cookies(r.URL) {
+			req.AddCookie(cookie)
+		}
+	} else {
+		for _, cookie := range r.Cookies {
+			req.AddCookie(cookie)
+		}
 	}
 	if r.isSaveResponse && r.downloadCallback != nil {
 		var wrap wrapResponseBodyFunc = func(rc io.ReadCloser) io.ReadCloser {
