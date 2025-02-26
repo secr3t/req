@@ -12,7 +12,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/imroc/req/v3/internal/transport"
+	"github.com/secr3t/req/v3/internal/transport"
 
 	"github.com/quic-go/quic-go"
 

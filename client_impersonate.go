@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/imroc/req/v3/http2"
 	utls "github.com/refraction-networking/utls"
+	"github.com/secr3t/req/v3/http2"
 )
 
 // Identical for both Blink-based browsers (Chrome, Chromium, etc.) and WebKit-based browsers (Safari, etc.)
@@ -229,15 +229,16 @@ var (
 	}
 
 	firefoxHeaders = map[string]string{
-		"user-agent":                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0",
+		"user-agent":                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
 		"accept":                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-		"accept-language":           "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2",
+		"accept-language":           "ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3",
+		"accept-encoding":           "gzip, deflate, br, zstd",
 		"upgrade-insecure-requests": "1",
 		"sec-fetch-dest":            "document",
 		"sec-fetch-mode":            "navigate",
 		"sec-fetch-site":            "same-origin",
 		"sec-fetch-user":            "?1",
-		//"te":                        "trailers",
+		"te":                        "trailers",
 	}
 
 	firefoxHeaderPriority = http2.PriorityParam{
