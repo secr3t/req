@@ -230,7 +230,7 @@ var (
 
 	firefoxHeaders = map[string]string{
 		"user-agent":                "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0",
-		"accept":                    "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+		"accept":                    "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 		"accept-language":           "ko-KR,ko;q=0.8,en-US;q=0.5,en;q=0.3",
 		"accept-encoding":           "gzip, deflate, br, zstd",
 		"upgrade-insecure-requests": "1",
