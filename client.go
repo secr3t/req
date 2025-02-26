@@ -1706,9 +1706,7 @@ func (c *Client) roundTrip(r *Request) (resp *Response, err error) {
 	}
 
 	if c.httpClient != nil && c.httpClient.Jar != nil {
-		for _, cookie := range c.httpClient.Jar.Cookies(r.URL) {
-			req.AddCookie(cookie)
-		}
+		c.httpClient.Jar.SetCookies(r.URL, r.Cookies)
 	} else {
 		for _, cookie := range r.Cookies {
 			req.AddCookie(cookie)
