@@ -11,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"reflect"
+	"slices"
 	"strings"
 	"time"
 
@@ -357,7 +358,16 @@ func parseSetCookies(c *Client, r *Response) (err error) {
 	if r.Response == nil {
 		return
 	}
-	c.SetCommonCookies(r.Cookies()...)
+	for _, appendCookie := range r.Cookies() {
+		if idx := slices.IndexFunc(c.Cookies, func(cookie *http.Cookie) bool {
+			return cookie.Domain == appendCookie.Domain && cookie.Name == appendCookie.Name &&
+				cookie.Path == appendCookie.Path
+		}); idx != -1 {
+			c.Cookies[idx] = appendCookie
+		} else {
+			c.Cookies = append(c.Cookies, appendCookie)
+		}
+	}
 	return nil
 }
 
