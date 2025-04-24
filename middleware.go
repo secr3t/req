@@ -353,6 +353,14 @@ func parseResponseBody(c *Client, r *Response) (err error) {
 	return
 }
 
+func parseSetCookies(c *Client, r *Response) (err error) {
+	if r.Response == nil {
+		return
+	}
+	c.SetCommonCookies(r.Cookies()...)
+	return nil
+}
+
 type callbackWriter struct {
 	io.Writer
 	written   int64

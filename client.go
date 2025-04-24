@@ -1539,6 +1539,7 @@ func C() *Client {
 		parseRequestBody,
 	}
 	afterResponse := []ResponseMiddleware{
+		parseSetCookies,
 		parseResponseBody,
 		handleDownload,
 	}
